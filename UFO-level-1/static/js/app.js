@@ -14,6 +14,7 @@ tableData.forEach(function(ufodata){
 
 var button=d3.select("#filter-btn");
 button.on("click",runenter);
+button.on("submit",runenter);
 
 function runenter(){
     d3.event.preventDefault();
