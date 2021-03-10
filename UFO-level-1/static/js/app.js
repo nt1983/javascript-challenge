@@ -19,7 +19,7 @@ button.on("submit",runenter);
 function runenter(){
     d3.event.preventDefault();
     var inputElement=d3.select("#datetime");
-    var inputValue=inputElement.property("value");
+    var inputValue=inputElement.property("value").trim();
     console.log(inputValue, typeof inputValue);
     var filterdata=tableData.filter(filterValue => filterValue.datetime===inputValue);
     d3.selectAll("td").remove();
