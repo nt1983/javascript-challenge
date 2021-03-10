@@ -18,11 +18,11 @@ button.on("submit",runenter);
 
 function runenter(){
     d3.event.preventDefault();
-    var inputDate=d3.select("#datetime").property("value");
-    var inputCity=d3.select("#city").property("value");
-    var inputState=d3.select("#state").property("value");
-    var inputCountry=d3.select("#country").property("value");
-    var inputShape=d3.select("#shape").property("value");
+    var inputDate=d3.select("#datetime").property("value").trim();
+    var inputCity=d3.select("#city").property("value").trim();
+    var inputState=d3.select("#state").property("value").trim();
+    var inputCountry=d3.select("#country").property("value").trim();
+    var inputShape=d3.select("#shape").property("value").trim();
     var filterdata=tableData;
     if (inputDate) {
         filterdata=tableData.filter(filterValue => filterValue.datetime===inputDate);
@@ -40,7 +40,7 @@ function runenter(){
         filterdata=filterdata.filter(filterValue => filterValue.shape===inputShape);
     }
 
-    d3.selectAll("tr").remove();
+    d3.selectAll("td").remove();
     console.log(filterdata);
     filterdata.forEach(function(ufodata){
         console.log(ufodata);
