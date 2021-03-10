@@ -22,7 +22,8 @@ function runenter(){
     var inputValue=inputElement.property("value").trim();
     console.log(inputValue, typeof inputValue);
     var filterdata=tableData.filter(filterValue => filterValue.datetime===inputValue);
-    d3.selectAll("td").remove();
+    //d3.selectAll("td").remove();
+    tbody.html("");
     console.log(filterdata);
     filterdata.forEach(function(ufodata){
         console.log(ufodata);

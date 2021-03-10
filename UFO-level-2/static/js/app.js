@@ -40,7 +40,8 @@ function runenter(){
         filterdata=filterdata.filter(filterValue => filterValue.shape===inputShape);
     }
 
-    d3.selectAll("td").remove();
+    //d3.selectAll("td").remove();
+    tbody.html("");
     console.log(filterdata);
     filterdata.forEach(function(ufodata){
         console.log(ufodata);
